@@ -1,10 +1,11 @@
-// connect a buzzer to pin 8
+// connect a buzzer to pin 13
 // connect a coil to pin 2 and gnd (you can experiment with different coils, and resistors, caps paralell to the coil, you can even add multiple coils in parallel and series)
 
 #define RGB_BRIGHTNESS 64 // Change white brightness (max 255)
 #define RGB_BUILTIN 48
 
 int adcPin = 2;
+int buzzerPin = 13;
 int previousValue = 0;
 int previousSlope = 0;
 int currentValue = 0;
@@ -25,7 +26,7 @@ const float smoothing = 0.05;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(8, OUTPUT);
+  pinMode(buzzerPin, OUTPUT);
 }
 
 void loop() {
@@ -34,7 +35,7 @@ void loop() {
 
 // Zero-crossing of slope
   if ((previousSlope < 0 && slope > 0) || (previousSlope > 0 && slope < 0)) {
-    tone(8, 2000, 20); // Beep!
+    tone(buzzerPin, 3000, 10); // Beep!
     activityCount++;
   }
 

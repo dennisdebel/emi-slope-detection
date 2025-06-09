@@ -1,3 +1,6 @@
+// connect a buzzer to pin 8
+// connect a coil to pin 2 and gnd (you can experiment with different coils, and resistors, caps paralell to the coil, you can even add multiple coils in parallel and series)
+
 #define RGB_BRIGHTNESS 64 // Change white brightness (max 255)
 #define RGB_BUILTIN 48
 

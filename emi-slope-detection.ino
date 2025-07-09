@@ -15,7 +15,7 @@ const int ledPin = RGB_BUILTIN;
 
 // Activity rate tracking
 unsigned long lastRateUpdate = 0;
-unsigned long rateInterval = 1000; // 1 second
+unsigned long rateInterval = 100; // TODO was 1000
 int activityCount = 0;
 float activityRate = 0;
 
